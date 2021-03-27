@@ -1,0 +1,155 @@
+import pygame
+
+pygame.init()
+
+sc = pygame.display.set_mode((300, 600))
+pygame.display.set_caption("Click to finishline")
+
+white = (255, 255, 255)
+blue = (0, 72, 255)
+red = (255, 0, 13)
+black = (0, 0, 0)
+
+w = 50
+h = 80
+
+x1 = 70
+y1 = 520
+
+x2 = 170
+y2 = 520
+sc.fill(white)
+
+pygame.draw.rect(sc, blue, (x1, y1, w, h))
+pygame.draw.rect(sc, red, (x2, y2, w, h))
+
+pygame.draw.rect(sc, black, (3, 0, 294, 5))
+pygame.draw.rect(sc, black, (3, 595, 294, 5))
+pygame.draw.rect(sc, black, (0, 147, 5, 294))
+pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+pygame.display.update()
+
+motion = "stop"
+play = True
+while play:
+    for i in pygame.event.get():
+        if i.type == pygame.QUIT:
+            exit()
+            
+        elif i.type == pygame.KEYDOWN:
+            if i.key == pygame.K_UP:
+                sc.fill(white)
+                y2 -= 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+                pygame.draw.rect(sc, black, (3, 595, 294, 5))
+                pygame.draw.rect(sc, black, (0, 147, 5, 294))
+                pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+                
+            elif i.key == pygame.K_DOWN:
+                sc.fill(white)
+                y2 += 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+                pygame.draw.rect(sc, black, (3, 595, 294, 5))
+                pygame.draw.rect(sc, black, (0, 147, 5, 294))
+                pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+                
+            elif i.key == pygame.K_RIGHT:
+                sc.fill(white)
+                x2 += 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+                pygame.draw.rect(sc, black, (3, 595, 294, 5))
+                pygame.draw.rect(sc, black, (0, 147, 5, 294))
+                pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+                
+            elif i.key == pygame.K_LEFT:
+                sc.fill(white)
+                x2 -= 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+pygame.draw.rect(sc, black, (3, 595, 294, 5))
+pygame.draw.rect(sc, black, (0, 147, 5, 294))
+pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+                
+                
+                
+                
+            elif i.key == pygame.K_w:
+                sc.fill(white)
+                y1 -= 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+                pygame.draw.rect(sc, black, (3, 595, 294, 5))
+                pygame.draw.rect(sc, black, (0, 147, 5, 294))
+                pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+                
+            elif i.key == pygame.K_s:
+                sc.fill(white)
+                y1 += 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+                pygame.draw.rect(sc, black, (3, 595, 294, 5))
+                pygame.draw.rect(sc, black, (0, 147, 5, 294))
+                pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+                
+            elif i.key == pygame.K_a:
+                sc.fill(white)
+                x1 -= 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+                pygame.draw.rect(sc, black, (3, 595, 294, 5))
+                pygame.draw.rect(sc, black, (0, 147, 5, 294))
+                pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+                
+            elif i.key == pygame.K_d:
+                sc.fill(white)
+                x1 += 3
+                pygame.draw.rect(sc, red, (x2, y2, w, h))
+                pygame.draw.rect(sc, blue, (x1, y1, w, h))
+                pygame.draw.rect(sc, black, (3, 0, 294, 5))
+                pygame.draw.rect(sc, black, (3, 595, 294, 5))
+                pygame.draw.rect(sc, black, (0, 147, 5, 294))
+                pygame.draw.rect(sc, black, (295, 147, 5, 294))
+
+
+                pygame.display.update()
+        
+        
+        elif i.type == pygame.KEYUP:
+            motion == "stop"
+            
+            
+            
+            
+        
